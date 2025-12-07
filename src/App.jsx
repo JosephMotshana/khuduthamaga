@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import logo from "./assets/logo.png"; // make sure your logo is in src/assets/
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div className="container">
+      {/* NAVBAR */}
+      <nav className="navbar">
+        <img src={logo} alt="Company Logo" className="logo" />
+        <ul className="nav-links">
+          <li>Home</li>
+          <li>Services</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+
+      {/* HERO SECTION */}
+      <header className="hero">
+        <h1>Welcome to Khuduthamaga Consulting</h1>
+        <p>Your partner in business solutions, technology, and strategic growth.</p>
+
+        <button className="cta-btn">Get Started</button>
+      </header>
+
+      {/* SECTION */}
+      <section className="info-section">
+        <h2>Our Services</h2>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          We provide professional consulting services including software development, 
+          business analysis, data insights, and digital strategy.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </section>
+    </div>
+  );
 }
 
-export default App
+export default App;
+

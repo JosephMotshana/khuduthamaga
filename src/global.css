@@ -1,7 +1,10 @@
+/* appp css */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f9f9f9;
+  color:black;
+
 }
 
 .container {
@@ -39,6 +42,7 @@ body {
   text-align: center;
   padding: 120px 20px;
   background: #eef3ff;
+  
 }
 
 .hero h1 {
@@ -48,6 +52,7 @@ body {
 
 .hero p {
   font-size: 18px;
+  color:black;
   margin-bottom: 25px;
 }
 
@@ -74,4 +79,3 @@ body {
 .info-section h2 {
   margin-bottom: 15px;
 }
-

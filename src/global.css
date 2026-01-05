@@ -1,24 +1,36 @@
-/* appp css */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  color:black;
-
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background:white;
+}
+
+/* CONTAINER */
 .container {
   width: 100%;
 }
 
 /* NAVBAR */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
+
+  padding: 16px 20px;
   background: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 100;
 }
 
 .logo {
@@ -28,7 +40,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   font-size: 16px;
   cursor: pointer;
 }
@@ -39,11 +51,20 @@ body {
 
 /* HERO SECTION */
 .hero {
+  min-height: 100vh;
+  padding-top: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
-  padding: 120px 20px;
-  background: #eef3ff;
-  
+  background: white;
 }
+
 
 .hero h1 {
   font-size: 40px;
@@ -52,7 +73,85 @@ body {
 
 .hero p {
   font-size: 18px;
-  color:black;
+  margin-bottom: 25px;
+}
+/* Services SECTION */
+.Services{
+  min-height: 100vh;
+  padding-top: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  background: white;
+}
+
+
+.Services h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.Services p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+/* About SECTION */
+.About{
+  min-height: 100vh;
+  padding-top: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  background: white;
+}
+
+
+.About h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.About p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* ContactUs SECTION */
+.ContactUs {
+  height: 100vh;           /* Full viewport height */
+  padding-top: 90px;       /* Space for fixed navbar */
+  padding-left: 20px;
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  background: white;       /* Change background here if needed */
+  box-sizing: border-box;  /* Make padding included in height */
+}
+
+.ContactUs h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.ContactUs p {
+  font-size: 18px;
   margin-bottom: 25px;
 }
 
@@ -70,12 +169,23 @@ body {
   background: #005fcc;
 }
 
-/* INFO SECTION */
-.info-section {
-  padding: 60px 40px;
-  text-align: center;
-}
 
-.info-section h2 {
-  margin-bottom: 15px;
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
 }

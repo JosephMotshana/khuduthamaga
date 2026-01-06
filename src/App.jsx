@@ -27,6 +27,16 @@ function App() {
         {/* <button className="cta-btn">Get Started</button> */}
       </header>
 
+
+      {/*About*/}
+      <section className="About"id="about">
+        <h2>About Us</h2>
+        <p>
+          We provide professional consulting services including software development, 
+          business analysis, data insights, and digital strategy.
+        </p>
+      </section>
+
       {/* SECTION */}
       <section className="Services"id="services">
         <h2>Our Services</h2>
@@ -36,15 +46,6 @@ function App() {
         </p>
       </section>
 
-      {/*About*/}
-      <section className="About"id="about">
- <h2>About Us</h2>
-        <p>
-          We provide professional consulting services including software development, 
-          business analysis, data insights, and digital strategy.
-        </p>
-      </section>
-      
        {/*contact*/}
       <section className="contact Us"id="contact">
  <h2>Contact Us</h2>

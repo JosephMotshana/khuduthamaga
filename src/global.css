@@ -1,4 +1,6 @@
 /* GLOBAL RESET */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -7,8 +9,8 @@ html, body {
   margin: 0;
   width: 100%;
   overflow-x: hidden;
-  font-family: Arial, sans-serif;
-  background:white;
+  font-family: 'Inter', sans-serif;
+  background: white;
 }
 
 /* CONTAINER */
@@ -19,69 +21,99 @@ html, body {
 /* NAVBAR */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap; 
+  white-space: nowrap; 
 
-  padding: 16px 20px;
+  padding: 10px 20px;
   background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 50px;
+  /* Fixed invalid white() color syntax to standard rgba */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
   z-index: 100;
+  width: 95%; 
+  max-width: 1200px;
 }
 
 .logo {
-  height: 50px;
+  height: 50px; /* Adjusted to fit better in the pill bar */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
-  font-size: 16px;
-  cursor: pointer;
+  align-items: center; 
+  gap: 20px; 
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
 }
 
-.nav-links li:hover {
-  color: #007bff;
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-/* HERO SECTION */
+/* Contact Us Button in Nav */
+.nav-links li.contact-link a {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+/* HERO SECTION - Matching SkoloNet Layout */
 .hero {
   min-height: 100vh;
-  padding-top: 90px;
-  padding-left: 20px;
-  padding-right: 20px;
-
+  width: 100%;
+  padding: 60px 10% 200px 10%; 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centered vertically but text is left-aligned */
+  align-items: flex-start;     
+  text-align: left;            
 
-  text-align: center;
-  background: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('./assets/image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 
 .hero h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+  font-size: 60px; 
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  max-width: 800px;
+  letter-spacing: -0.02em;
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 650px;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
 }
-/* Services SECTION */
-.Services{
-  min-height: 100vh;
-  padding-top: 90px;
-  padding-left: 20px;
-  padding-right: 20px;
 
+/* Services, About, & Contact Us Sections */
+.Services, .About, .ContactUs {
+  min-height: 100vh;
+  padding: 90px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,101 +123,64 @@ html, body {
   background: white;
 }
 
-
-.Services h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.Services p {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-/* About SECTION */
-.About{
-  min-height: 100vh;
-  padding-top: 90px;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  background: white;
-}
-
-
-.About h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.About p {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-
-/* ContactUs SECTION */
-.ContactUs {
-  height: 100vh;           /* Full viewport height */
-  padding-top: 90px;       /* Space for fixed navbar */
-  padding-left: 20px;
-  padding-right: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  background: white;       /* Change background here if needed */
-  box-sizing: border-box;  /* Make padding included in height */
-}
-
-.ContactUs h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.ContactUs p {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-
-.cta-btn {
-  padding: 12px 25px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.cta-btn:hover {
-  background: #005fcc;
-}
 
 
 /* MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-  .nav-links {
-    gap: 12px;
-    font-size: 14px;
+@media screen and (max-width: 768px) {
+  /* NAVBAR FIXES for small/narrow screens like Z Fold 5 */
+  .navbar {
+    width: 96% !important; 
+    padding: 6px 10px !important; /* Thinner padding for narrow screens */
+    top: 10px !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
   }
 
   .logo {
-    height: 40px;
+    height: 25px !important; /* Shorter logo to save vertical and horizontal space */
+  }
+
+  .nav-links {
+    gap: 6px !important; /* Very tight gap for ultra-narrow screens */
+  }
+
+  .nav-links li a {
+    font-size: 9px !important; /* Smaller font to fit Z Fold 5 front screen */
+  }
+
+  .nav-links li.contact-link a {
+    padding: 4px 8px !important; /* Smaller button footprint */
+    font-size: 9px !important;
+  }
+
+  /* HERO SECTION ADJUSTMENTS */
+  .hero {
+    min-height: 100vh !important;
+    /* Reduced top padding from 120px to 80px to bring words closer to navbar */
+    padding: 80px 15px 40px 15px !important; 
+    
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important; 
+    display: flex !important;
+    justify-content: flex-start !important; /* Keeps content near the top */
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 28px !important; /* Slightly smaller for better fit */
+    line-height: 1.1 !important;
+    margin-bottom: 10px !important; /* Brings the paragraph closer to the headline */
   }
 
   .hero p {
-    font-size: 16px;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
   }
+}
+
+/* Specific Link Color on Click */
+.nav-links li a:active,
+.nav-links li a:focus {
+  color: #4CAF50 !important;
 }

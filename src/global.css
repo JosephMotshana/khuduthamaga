@@ -102,7 +102,32 @@ html, body {
 .hero p {
   font-size: 20px;
   line-height: 1.5;
-  max-width: 650px;
+  max-width: fit-content;    /* Ensures the animation stops at the end of the text */
+  font-weight: 800 !important;
+  
+  /* Animation Setup */
+  overflow: hidden;          /* Hides characters before they are typed */
+  white-space: nowrap;       /* Keeps text on one line */
+  border-right: 3px solid;   /* The "cursor" */
+  display: block;            /* Ensures it stays on its own line */
+  text-align: left;          /* Keeps text to the left */
+  
+  /* Typing logic: change 3.5s to make it faster or slower */
+  animation: 
+    typing 3.5s steps(40, end) forwards, 
+    blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect: width grows from 0 to full */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* The blinking cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: transparent; } /* Change 'black' to your text color */
 }
 
 /* SLIDESHOW ANIMATION (4s screentime each) */
@@ -126,10 +151,11 @@ html, body {
 /* MOBILE RESPONSIVENESS */
 @media screen and (max-width: 768px) {
   .navbar {
+    position: absolute;
     width: 100% !important;
     padding: 8px 10px !important;
     top: 80px !important;
-    
+
     /* CRITICAL FIXES */
     display: flex !important;
     flex-wrap: nowrap !important; /* Forces all items to stay on the same line */
@@ -164,45 +190,134 @@ html, body {
   }
 
   /* HERO ADJUSTMENTS */
-  .hero {
-    padding: 100px 10px 60px 20px !important; /* Kept closer to navbar as requested */
+ /* HERO ADJUSTMENTS */
+.hero {
+    padding: 100px 10px 60px 20px !important;
     background-attachment: scroll !important; 
-  }
+    
+    /* Add these lines below */
+    background-size: cover !important;      /* Forces image to fill the area */
+    background-position: center !important;  /* Keeps the main subject centered */
+    background-repeat: no-repeat !important; /* Prevents tiling */
+    width: 100%;                             /* Ensures it spans the screen */
+}
 
   .hero h1 {
-    font-size: 32px !important; 
+    font-size: 42px !important; 
   }
 
   .hero p {
-    font-size: 16px !important;
+    font-size: 10px !important;
+    top: 40px !important;
   }
 }
 
-/* About SECTION */
-.About{
-  min-height: 100vh;
-  padding-top: 90px;
-  padding-left: 20px;
-  padding-right: 20px;
+.About {
+  /* This increases the background height to fill the entire screen */
+  min-height: 100vh; 
+  padding: 80px 10%;
+  background: #050a12; 
+  
+  /* These lines ensure the boxes stay centered in the middle of the tall background */
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  color: #ffffff; /* Set default text to white for visibility */
+}
 
+.About-container {
+  max-width: 1200px; /* Slightly wider for a "bigger" feel */
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Heading outside the boxes */
+.About-title {
+  font-size: 52px; /* Increased size for a more "grand" look */
+  font-weight: 800;
+  margin-bottom: 100px;
+  text-align: left;
+  color: #ffffff; 
+}
+
+.About-title span {
+  color: #3b82f6; 
+}
+
+/* Wrapper for the two boxes */
+.Boxes-wrapper {
+  display: flex;
+  gap: 40px; /* Increased gap for better spacing */
+}
+
+/* The individual rounded boxes */
+.Text-card {
+  flex: 1;
+  background: rgb(28, 236, 216); 
+  padding: 60px; /* Increased padding to make the boxes themselves look bigger */
+  border-radius: 32px; /* Smoother, larger round edges */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  background: white;
 }
 
-
-.About h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+.Text-card p {
+  font-size: 19px; /* Slightly larger font for readability */
+  line-height: 1.8;
+  color: #03357a; 
+  margin: 0;
 }
 
-.About p {
-  font-size: 18px;
-  margin-bottom: 25px;
+.Text-card strong {
+  color: #011c42; /* Darker strong text to contrast against the bright box */
+}
+
+/* Responsive adjustment */
+@media (max-width: 968px) {
+  .About {
+    height: auto;
+    padding: 100px 20px;
+  }
+  .Boxes-wrapper {
+    flex-direction: column;
+  }
+  .About-title {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+/* Action button inside the second box
+.About-btn {
+  align-self: flex-start;
+  margin-top: 25px;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+} */
+
+/* .About-btn:hover {
+  background-color: #1d4ed8;
+} */
+
+/* Responsive adjustment for small screens */
+@media (max-width: 850px) {
+  .Boxes-wrapper {
+    flex-direction: column;
+  }
+  .About-title {
+    text-align: center;
+  }
+  .Text-card {
+    padding: 30px;
+  }
 }
 
 /* Services SECTION */

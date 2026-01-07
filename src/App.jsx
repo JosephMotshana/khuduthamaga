@@ -18,21 +18,34 @@ function App() {
       {/* HERO SECTION */}
       <header className="hero" id="home">
         <h1>Welcome to Khuduthamaga Consulting</h1>
-          <p>Your partner in business solutions, technology, 
-          and strategic growth.</p>
+          <p>Where agricultural skills are turned into real opportunities</p>
 
         {/* <button className="cta-btn">Get Started</button> */}
       </header>
 
-
-      {/*About*/}
-      <section className="About"id="about">
-        <h2>About Us</h2>
+<section className="About" id="about">
+  <div className="About-container">
+    {/* Heading stays outside the boxes */}
+    <h2 className="About-title">WHO ARE <span>WE?</span></h2>
+    
+    <div className="Boxes-wrapper">
+      {/* Box 1 */}
+      <div className="Text-card">
         <p>
-          We provide professional consulting services including software development, 
-          business analysis, data insights, and digital strategy.
+          <strong>Khuduthamaga Consulting (Pty) Ltd</strong> is an Education, Training & Development (ETD) enterprise with a dynamic potential for growth. Established in 2015, we are a 100% Black-owned and Female-owned business.
         </p>
-      </section>
+      </div>
+
+      {/* Box 2 */}
+      <div className="Text-card">
+        <p>
+          Owned by <strong>Boipelo Nameng</strong>, our name is Setswana for <strong>“Executive.”</strong> This essence drives us to put plans and resolutions into effect—making business happen.
+        </p>
+        {/* <button className="About-btn">Explore Features</button> */}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* SECTION */}
       <section className="Services"id="services">

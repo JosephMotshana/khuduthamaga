@@ -41,7 +41,7 @@ function App() {
       {/* Box 2 */}
       <div className="Text-card">
         <p>
-          Owned by <strong>Boipelo Nameng</strong>, our name is Setswana for <strong>“Executive.”</strong> This essence drives us to put plans and resolutions into effect—making business happen.
+          <strong>Khuduthamaga Consulting (Pty) Ltd</strong> is Owned by <strong>Boipelo Nameng</strong>. Our name translates to <strong>“Executive”</strong> and that drives us to put plans and resolutions into effect—making business happen.
         </p>
         {/* <button className="About-btn">Explore Features</button> */}
       </div>

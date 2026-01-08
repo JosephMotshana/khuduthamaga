@@ -45,7 +45,7 @@ html, body {
 }
 
 .nav-links li a {
-  color: black;
+  color: rgb(236, 143, 3);
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
@@ -53,7 +53,7 @@ html, body {
 }
 
 .nav-links li.contact-link a {
-  background-color: black;
+  background-color: rgb(236, 143, 3);
   color: white;
   padding: 8px 16px;
   border-radius: 50px;
@@ -88,6 +88,7 @@ html, body {
 .hero h1, .hero p {
   position: relative;
   z-index: 2;
+  color: white;
 }
 
 .hero h1 {
@@ -96,8 +97,11 @@ html, body {
   line-height: 1.1;
   margin-bottom: 20px;
   max-width: 800px;
+  color: white;
 }
-
+:root {
+  /* CHANGE THIS VALUE: e.g., 10s (fast), 20s (normal), 30s (slow) */
+  --slideshow-speed: 5s;}
 .hero p {
   font-size: 20px;
   line-height: 1.5;
@@ -107,7 +111,7 @@ html, body {
   white-space: nowrap;
   border-right: 3px solid;
   /* Reduced width from 100% to avoid overflow on narrow screens */
-  animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+  animation: typing 6s steps(40, end) forwards,  step-end infinite;
 }
 
 @keyframes typing { from { width: 0; } to { width: 100%; } }

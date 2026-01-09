@@ -8,7 +8,7 @@ function App() {
     <div className="container">
       {/* NAVBAR */}
       <nav className="navbar">
-        <a href="home"><img src={logo} alt="Company Logo" className="logo" /></a>
+        <a href="#home"><img src={logo} alt="Company Logo" className="logo" /></a>
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -41,7 +41,7 @@ function App() {
       {/* Box 2 */}
       <div className="Text-card">
         <p>
-          <strong>Khuduthamaga Consulting (Pty) Ltd</strong> is Owned by <strong>Boipelo Nameng</strong>. Our name translates to <strong>“Executive”</strong> and that drives us to put plans and resolutions into effect—making business happen.
+          <strong>Khuduthamaga Consulting (Pty) Ltd</strong> is Owned by <strong>Boipelo Nameng</strong>. Our name translates to <strong>“Executive”</strong> and that               drives us to put plans and resolutions into effect—making business happen.
         </p>
         {/* <button className="About-btn">Explore Features</button> */}
       </div>

@@ -241,7 +241,6 @@ html, body {
 /* MOBILE RESPONSIVENESS */
 @media screen and (max-width: 968px) {
   .navbar {
-    position: relative;
     top: 60px;
     padding: 8px 10px;
     width: 90%;

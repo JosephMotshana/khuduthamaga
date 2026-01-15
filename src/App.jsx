@@ -8,7 +8,7 @@ function App() {
     <div className="container">
       {/* NAVBAR */}
       <nav className="navbar">
-        <a href="home"><img src={logo} alt="Company Logo" className="logo" /></a>
+        <a href="#home"><img src={logo} alt="Company Logo" className="logo" /></a>
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -24,7 +24,7 @@ function App() {
 
         {/* <button className="cta-btn">Get Started</button> */}
       </header>
-
+      
 <section className="About" id="about">
   <div className="About-container">
     {/* Heading stays outside the boxes */}

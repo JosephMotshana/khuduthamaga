@@ -21,7 +21,7 @@ function App() {
         <h1>Welcome to Khuduthamaga Consulting</h1>
           <p>Where agricultural skills are turned into real opportunities</p>
       </header>
-
+      
 <section className="About" id="about">
   <div className="About-container">
     <h2 className="About-title">WHO ARE <span>WE?</span></h2>
@@ -37,7 +37,7 @@ function App() {
       {/* Box 2 */}
       <div className="Text-card">
         <p>
-          <strong>Khuduthamaga Consulting (Pty) Ltd</strong> is Owned by <strong>Boipelo Nameng</strong>. Our name translates to <strong>“Executive”</strong> and that               drives us to put plans and resolutions into effect—making business happen.
+          <strong>Khuduthamaga Consulting (Pty) Ltd</strong> is Owned by <strong>Boipelo Nameng</strong>. Our name translates to <strong>“Executive”</strong> and that drives us to put plans and resolutions into effect—making business happen.
         </p>
         
       </div>

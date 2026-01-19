@@ -1,6 +1,5 @@
 import "./global.css";
-import logo from "./assets/logo.png"; // make sure your logo is in src/assets/
-// 1. Import the image at the top of the file
+import logo from "./assets/logo.png";
 import OrganogramImg from './assets/ORGANOGRAM.png';
 
 function App() {
@@ -21,13 +20,10 @@ function App() {
       <header className="hero" id="home">
         <h1>Welcome to Khuduthamaga Consulting</h1>
           <p>Where agricultural skills are turned into real opportunities</p>
-
-        {/* <button className="cta-btn">Get Started</button> */}
       </header>
 
 <section className="About" id="about">
   <div className="About-container">
-    {/* Heading stays outside the boxes */}
     <h2 className="About-title">WHO ARE <span>WE?</span></h2>
     
     <div className="Boxes-wrapper">
@@ -43,7 +39,7 @@ function App() {
         <p>
           <strong>Khuduthamaga Consulting (Pty) Ltd</strong> is Owned by <strong>Boipelo Nameng</strong>. Our name translates to <strong>“Executive”</strong> and that               drives us to put plans and resolutions into effect—making business happen.
         </p>
-        {/* <button className="About-btn">Explore Features</button> */}
+        
       </div>
     </div>
   </div>
@@ -65,6 +61,7 @@ function App() {
               <li><strong>National Certificate in Poultry Production</strong> <br/> (NQF Level 2 – SAQA Code: 49582)</li>
               <li><strong>National Certificate in Mixed Farming Systems</strong> <br/> (NQF Level 2 – SAQA Code: 48977)</li>
               <li><strong>National Certificate in Plant Production</strong> <br/> (NQF Level 2 – SAQA Code: 48975)</li>
+              {/* <button className="cta-btn">Get Started</button> */}
             </ul>
           </div>
 
@@ -121,7 +118,7 @@ function App() {
         </div>
       </section>
 
-      {/* SECTION 3: CONTACT (The Image Layout) */}
+      {/* SECTION 3: CONTACT */}
       <section className="contact-wrapper" id="contact">
         <div className="contact-content">
           
@@ -161,8 +158,8 @@ function App() {
 <div className="form-card">
   <h3>Get Started Today</h3>
   
-  {/* 1. Go to formspree.io to get your unique ID */}
-  {/* 2. Replace 'your_form_id' with that ID */}
+  {/* Form*/}
+
   <form action="https://formspree.io/f/xkogdjbr" method="POST">
     
     <div className="input-group">
